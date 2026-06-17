@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Gerente</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<aside class="sidebar">
+
+    <h2>EMPRESA XYZ</h2>
+
+    <ul>
+
+        <li onclick="irDashboard()">
+            Dashboard
+        </li>
+
+        <li onclick="irUsuarios()">
+            Usuarios
+        </li>
+
+        <li onclick="cerrarSesion()">
+            Cerrar Sesión
+        </li>
+
+    </ul>
+
+</aside>
+
+    <main class="content">
+
+<div class="stats">
+
+    <div class="stat-card">
+        <h3>Diseño Web</h3>
+        <span>5</span>
+    </div>
+
+    <div class="stat-card">
+        <h3>Documentación</h3>
+        <span>3</span>
+    </div>
+
+    <div class="stat-card">
+        <h3>Capacitación</h3>
+        <span>4</span>
+    </div>
+
+    <div class="stat-card">
+        <h3>Base de Datos</h3>
+        <span>3</span>
+    </div>
+
+</div>
+
+        <div class="card">
+
+            <button
+                class="btn"
+                onclick="nuevoUsuario()"
+            >
+                Nuevo Usuario
+            </button>
+
+            <br><br>
+
+            <table border="1" width="100%">
+
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Área</th>
+                        <th>Canva</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tablaUsuarios">
+
+                </tbody>
+
+            </table>
+
+            <div id="modalUsuario" class="modal">
+
+    <div class="modal-content">
+
+        <span class="cerrar" onclick="cerrarModal()">
+            &times;
+        </span>
+
+        <h2>Nuevo Usuario</h2>
+
+        <input type="text" placeholder="Usuario">
+
+        <input type="text" placeholder="Nombre">
+
+        <input type="text" placeholder="Apellido">
+
+        <input type="text" placeholder="Móvil">
+
+        <input type="email" placeholder="Correo">
+
+        <input type="text" value="12345">
+
+        <select>
+            <option>Diseño Web</option>
+            <option>Documentación</option>
+            <option>Capacitación</option>
+            <option>Base de Datos</option>
+        </select>
+
+        <button class="btn">
+            Guardar
+        </button>
+
+    </div>
+
+</div>
+        </div>
+
+    </main>
+
+</div>
+
+<script src="../js/gerente.js"></script>
+
+</body>
+</html>
